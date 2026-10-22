@@ -19,7 +19,7 @@
         android:scaleType="centerCrop"/>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/contenedor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -39,6 +39,7 @@
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/tvTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -49,6 +50,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/etCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/bg_input"
@@ -62,6 +64,7 @@
                 android:textColorHint="#FFCDBF" />
 
             <EditText
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginTop="15dp"
@@ -76,6 +79,7 @@
                 android:textColorHint="#FFCDBF" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnIniciar"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginTop="30dp"
@@ -86,6 +90,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvCrearCuenta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
