@@ -1,5 +1,6 @@
 package com.example.music_app4e
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -105,6 +106,29 @@ class HomeActivity : AppCompatActivity() {
             Glide.with(this)
                 .load(album.obtenerImagenGrande())
                 .into(imgPortada)
+
+            // PASAR INFORMACIÓN A OTRA PANTALLA
+            vistaAlbum.setOnClickListener {
+
+                val idAlbum = album.collectionId
+
+                if(idAlbum != null){
+
+                    val intent = Intent(this@HomeActivity, DetailsActivity::class.java)
+
+                    intent.putExtra("ID_ALBUM", idAlbum)
+                    intent.putExtra("NOMBRE_ALBUM", album.collectionName)
+                    intent.putExtra("ARTISTA_ALBUM", album.artistName)
+                    intent.putExtra("GENERO_ALBUM", album.primaryGenreName)
+                    intent.putExtra("CANCIONES_ALBUM", album.trackCount)
+                    intent.putExtra("IMAGEN_ALBUM", album.obtenerImagenGrande())
+
+                    startActivity(intent)
+
+
+                }
+
+            }
 
             contenedor.addView(vistaAlbum)
 
